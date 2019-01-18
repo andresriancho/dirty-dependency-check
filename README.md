@@ -29,8 +29,8 @@ git clone https://github.com/stevespringett/nist-data-mirror.git
 cd nist-data-mirror
 mvn clean package
 cd target
-mkdir -p mirror
 rm -rf mirror/*
+mkdir -p mirror
 java -jar nist-data-mirror.jar mirror json
-cp mirror/*.json.gz ../dirty-dependency-check/data/
+cp mirror/*.json.gz ../../dirty-dependency-check/data/
 ```
